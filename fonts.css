@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+@font-face {
+    font-family: 'Anonymous Pro';
+    src: url(AnonymousPro-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Safira March Personal Use Only';
+    src: url(Safira\ March\ Personal\ Use\ Only.ttf);
+}
+
+nav a {
+    font-family: 'Red Hat Display', sans-serif;
+    text-decoration: none;
+    color: #F6F4F1;
+    letter-spacing: 0.2px;
+}
+nav a:hover {
+    color: #8C99D9;
+}
+
+h2 {
+    font-family: 'Red Hat Display', serif;
+    font-size: 2rem;
+    color: #F6F4F1;
+}
+
+/* For Price Page Small Headings */
+h3 {
+    font-family: 'Red Hat Display', serif;
+    font-size: 1.5rem;
+    color: #1e1e1e;
+    margin-bottom: 20px;
+}
+
+/* For Price Page Titles */
+h4 {
+    color: #6875B8;
+    text-align: center;
+    font-family: "Safira March Personal Use Only";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* For Prices */
+h5 {
+    color: #6875B8;
+    font-family: "Anonymous Pro";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+p {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1rem;
+    color: #1e1e1e;
+    letter-spacing: 0.2px;
+    line-height: 1.5;
+}
+
+.google-rating {
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 4.78px;
+    border-radius: 4.78px;
+    background: #FFF;
+    box-shadow: -2.39px -1.195px 9.56px 0 rgba(0, 0, 0, 0.08), 11.95px 8.365px 23.9px 0 rgba(0, 0, 0, 0.08);
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rating-numbers p{
+    color: #4285F4;
+    text-align: center;
+    font-family: "Plus Jakarta Sans";
+    font-size: 24pt;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 0;
+}
+
+.rating-stars {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.google-text {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.google-text h1 {
+    color: var(--Dark-grey, #6A6A6A);
+    text-align: center;
+    font-family: "Plus Jakarta Sans";
+    font-size: 14pt;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.google-text p {
+    color: var(--Dark-grey, #6A6A6A);
+    text-align: center;
+    font-family: "Plus Jakarta Sans";
+    font-size: 6pt;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.google-textbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    font-family: 'Red Hat Display', sans-serif;
+    color: #F6F4F1;
+    margin: 0;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+    letter-spacing: 0.4px;
+}

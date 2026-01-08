@@ -1,0 +1,286 @@
+/*
+ * Global Stylesheet
+ * Denne fil indeholder globale stilarter for webapplikationen.
+ * Det inkluderer stilarter for header, footer, og generelle elementer.
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    background-color: #F6F4F1;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 10%;
+    background-color: rgba(30, 30, 30, 0.9);
+    backdrop-filter: blur(10px);
+}
+
+.nav-box {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 0px 60px;
+}
+
+.socials-box {
+    display: flex;
+    gap: 6px;
+}
+
+.socials-box svg:hover{
+    opacity: 0.8;
+}
+
+.contact-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(30, 30, 30, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px #FFFFFF30 solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    backdrop-filter: blur(40px);
+    transition: 100ms;
+}
+
+.contact-btn:hover {
+    background-color: rgba(100, 100, 100, 0.3);
+}
+
+/* Tooltip default */
+.popup {
+    display: none; /* hide by default */
+    position: fixed;
+    bottom: 100px; /* adjust above button */
+    right: 30px;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #1E1E1E;
+    z-index: 100;
+}
+
+/* Tooltip on hover */
+.contact-popup:not(.form-open):hover .popup {
+    display: block;
+}
+
+/* Form popup */
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 80px;
+    z-index: 200;
+}
+
+.contact-popup:not(.form-open):hover .popup {
+    display: block;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    height: 400px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #6875B8;
+    padding-bottom: 10px;
+}
+
+footer p {
+    color: #F6F4F1;
+}
+
+.footer-content {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    align-self: stretch;
+}
+
+.footer-box {
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.hours-lists {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.hours-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.hours-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-bullet-point {
+    display: flex;
+    flex-direction: row;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-pic {
+    width: 100%;
+    margin-top: 89px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #F6F4F1;
+    font-size: 20pt;
+}
+
+.hero-text-box {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.hero-text-box img {
+    height: 80px;
+}
+
+.form-row {
+    margin-bottom: 4px;
+    padding: auto;
+    color: #F6F4F1;
+}
+
+.form-input {
+    display: block;
+    color: #0c0c0c;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.form-error {
+    color: red;
+}
+
+#popup-form-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#popup-form-container form {
+    background-color: #969696;
+    padding: 20px;
+    border-radius: 32px;
+    width: 80%;
+    max-width: 500px;
+    margin: 30px auto;
+    opacity: 0.80;
+}
+
+@media (max-width: 768px) {
+    header .nav-box, .socials-box {
+        display: none;
+    }
+
+    .off-screen-menu .socials-box {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    .hero-pic {
+        height: 160px;
+        font-size: 14pt;
+    }
+
+    .hero-text-box img {
+        display: none;
+    }
+
+    footer {
+        height: fit-content;
+        padding: 40px 0px 20px 0px;
+        gap: 60px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .footer-content .socials-box {
+        display: flex;
+    }
+}
+
+@media (min-width: 769px) {
+    header .ham-menu {
+        display: none;
+    }
+}

@@ -1,0 +1,145 @@
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0,0,0,0.4);
+}
+
+.hero-text-mob {
+    display: none;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-buttons a {
+    color: #F6F4F1;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+}
+
+.glass {
+    font-family: 'Red Hat Display', sans-serif;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1000px;
+    border: 1px solid #FFFFFF30;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    color: #F6F4F1;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 100ms ease;
+}
+
+.glass:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    animation: floatUpDown 2s ease-in-out infinite;
+    z-index: 1;
+    opacity: 60%;
+}
+
+.scroll-indicator img {
+    height: 40px;
+    width: auto;
+}
+
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#hideOnScroll {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#hideOnScroll.hidden {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+}
+
+section {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+section p {
+    width: 60%;
+    margin: auto;
+}
+
+.elfsight-app-b91f9785-2370-4020-a606-30c8c68bd6e0 {
+    margin-top: 50px;
+    letter-spacing: 0.4px;
+}
+
+@media (max-width: 768px) {
+    .hero-text {
+        gap: 20px;
+    }
+    .hero-text-mob {
+        display: block;
+    }
+    .hero-text-desk {
+        display: none;
+    }
+    section p {
+        width: 80%;
+    }
+}
