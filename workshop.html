@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="hamburger.css">
     <link rel="stylesheet" href="popup-form.css">
     <link rel="stylesheet" href="workshop.css">
+    <link rel="stylesheet" href="gallery.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="gallery.js" defer></script>
 </head>
 <body>
     <header>
@@ -135,14 +137,23 @@
                 Tusind tak for tilliden [Navn]! jeg er selv rigtig godt tilfreds med resultatet, og det håber jeg også du er. 😎</p>
             </div>
         </div>
-        <div class="price-card">
-            <div class="image-wrapper">
-                <img src="images/74'er_2.png" alt="Fender Stratocaster">
+        <section aria-label="Photos">
+            <div class="carousel" data-carousel>
+                <button class="carousel-button prev" data-carousel-button="prev">&#10094;</button>
+                <button class="carousel-button next" data-carousel-button="next">&#10095;</button>
+                <ul data-slides>
+                    <li class="slide" data-active>
+                        <img src="images/74'er_1.png" alt="74 Strat #1">
+                    </li>
+                    <li class="slide">
+                        <img src="images/74'er_2.png" alt="74 Strat #2">
+                    </li>
+                    <li class="slide">
+                        <img src="images/74'er_3.png" alt="74 Strat #3">
+                    </li>
+                </ul>
             </div>
-            <div class="image-wrapper" id="hide-pic">
-                <img src="images/74'er_1.png" alt="Fender Stratocaster '56">
-            </div>
-        </div>
+        </section>
     </section>
 
     <section class="prices-section">
