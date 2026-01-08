@@ -1,18 +1,37 @@
-const buttons = document.querySelectorAll("[data-carousel-button]");
+const slider = document.querySelector('.slider');
+const slides = slider.querySelectorAll('img');
+const buttons = document.querySelectorAll('.slider-nav button');
 
-buttons.forEach(button => {
-    button.addEventListener("click", () => {
-        const offset = button.dataset.carouselButton === "next" ? 1 : -1;
-        const slides = button
-        .closest("[data-carousel]")
-        .querySelector("[data-slides]")
+    buttons.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+        slider.scrollTo({
+            left: slider.clientWidth * index,
+            behavior: 'smooth'
+        });
+    });
 
-        const activeSlide = slides.querySelector("[data-active]");
-        let newIndex = [...slides.children].indexOf(activeSlide) + offset;
-        if (newIndex < 0) newIndex = slides.children.length -1;
-        if (newIndex >= slides.children.length) newIndex = 0;
+    function updateActiveDot() {
+        const sliderRect = slider.getBoundingClientRect();
+        let activeIndex = 0;
+        let minDistance = Infinity;
 
-        slides.children[newIndex].dataset.active = true;
-        delete activeSlide.dataset.active;
-    })
+        slides.forEach((slide, index) => {
+        const rect = slide.getBoundingClientRect();
+        const distance = Math.abs(rect.left - sliderRect.left);
+
+        if (distance < minDistance) {
+            minDistance = distance;
+            activeIndex = index;
+        }
+    });
+
+    buttons.forEach(btn => btn.classList.remove('active'));
+    buttons[activeIndex].classList.add('active');
+}
+
+    slider.addEventListener('scroll', () => {
+    requestAnimationFrame(updateActiveDot);
 });
+
+// Set initial state
+updateActiveDot();});
