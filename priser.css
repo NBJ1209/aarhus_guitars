@@ -92,6 +92,7 @@
 .other-vertical-price-container {
     display: flex;
     flex-direction: row;
+    min-width: 300px;
 }
 
 .other-price {
