@@ -30,6 +30,7 @@
 
 .price-card {
     display: flex;
+    flex-direction: row;
     align-items: stretch;
     gap: 30px;
     margin: 30px 0 30px 0;
@@ -115,8 +116,7 @@
 
 .slider {
     display: flex;
-    height: 800px;
-    width: 600px;
+    width: auto;
     margin: auto;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -171,6 +171,13 @@
 
 .slider-nav button.active {
     background-color: rgba(255, 255, 255, 0.8);
+}
+
+.container,
+.slider-wrapper,
+.slider {
+    height: 100%;
+    width: 100%;
 }
 
 /*
